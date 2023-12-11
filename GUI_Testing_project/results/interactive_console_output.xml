@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231128 18:39:52.087" rpa="false" schemaversion="4">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\Roni\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Login To Service">
+<msg timestamp="20231128 18:39:52.257" level="FAIL">No keyword with name 'Login To Service' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?</msg>
+<status status="FAIL" starttime="20231128 18:39:52.257" endtime="20231128 18:39:52.257"/>
+</kw>
+<kw name="Click">
+<arg>id=add-to-cart-sauce-labs-backpack</arg>
+<status status="NOT RUN" starttime="20231128 18:39:52.259" endtime="20231128 18:39:52.259"/>
+</kw>
+<kw name="Click">
+<arg>css=.shopping_cart_link</arg>
+<status status="NOT RUN" starttime="20231128 18:39:52.260" endtime="20231128 18:39:52.260"/>
+</kw>
+<kw name="Take Screenshot">
+<status status="NOT RUN" starttime="20231128 18:39:52.260" endtime="20231128 18:39:52.260"/>
+</kw>
+<kw name="Click">
+<arg>id=checkout</arg>
+<status status="NOT RUN" starttime="20231128 18:39:52.261" endtime="20231128 18:39:52.261"/>
+</kw>
+<kw name="Enter Information">
+<status status="NOT RUN" starttime="20231128 18:39:52.261" endtime="20231128 18:39:52.261"/>
+</kw>
+<kw name="Validate Order Information">
+<status status="NOT RUN" starttime="20231128 18:39:52.262" endtime="20231128 18:39:52.262"/>
+</kw>
+<status status="PASS" starttime="20231128 18:39:52.102" endtime="20231128 18:40:13.827"/>
+</kw>
+<status status="PASS" starttime="20231128 18:39:52.102" endtime="20231128 18:40:13.828"/>
+</test>
+<status status="PASS" starttime="20231128 18:39:52.088" endtime="20231128 18:40:13.828"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

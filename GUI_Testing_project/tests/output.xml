@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231211 20:44:01.244" rpa="false" schemaversion="4">
+<suite id="s1" name="GUI Login test" source="D:\Code\Portfolio\GUI_Testing_project\tests\GUI_Login_test.robot">
+<test id="s1-t1" name="Login With Valid Credentials" line="20">
+<kw name="New Page">
+<arg>https://www.saucedemo.com/</arg>
+<msg timestamp="20231211 20:44:01.704" level="FAIL">No keyword with name 'New Page' found.</msg>
+<status status="FAIL" starttime="20231211 20:44:01.704" endtime="20231211 20:44:01.704"/>
+</kw>
+<kw name="Fill Text">
+<arg>id=user-name</arg>
+<arg>${CORRECT_USERNAME}</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.705" endtime="20231211 20:44:01.705"/>
+</kw>
+<kw name="Fill Text">
+<arg>id=password</arg>
+<arg>${CORRECT_PASSWORD}</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.706" endtime="20231211 20:44:01.706"/>
+</kw>
+<kw name="Click">
+<arg>id=login-button</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.707" endtime="20231211 20:44:01.707"/>
+</kw>
+<doc>Logs in the service once</doc>
+<status status="FAIL" starttime="20231211 20:44:01.703" endtime="20231211 20:44:01.707">No keyword with name 'New Page' found.</status>
+</test>
+<test id="s1-t2" name="Login With All Valid Usernames" line="27">
+<for flavor="IN">
+<var>${user}</var>
+<value>@{CORRECT_USERNAMES}</value>
+<iter>
+<var name="${user}">standard_user</var>
+<kw name="Log" library="BuiltIn">
+<arg>${user}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231211 20:44:01.714" level="INFO">standard_user</msg>
+<status status="PASS" starttime="20231211 20:44:01.714" endtime="20231211 20:44:01.714"/>
+</kw>
+<kw name="New Page">
+<arg>https://www.saucedemo.com/</arg>
+<msg timestamp="20231211 20:44:01.714" level="FAIL">No keyword with name 'New Page' found.</msg>
+<status status="FAIL" starttime="20231211 20:44:01.714" endtime="20231211 20:44:01.715"/>
+</kw>
+<kw name="Fill Text">
+<arg>id=user-name</arg>
+<arg>${user}</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.715" endtime="20231211 20:44:01.715"/>
+</kw>
+<kw name="Fill Text">
+<arg>id=password</arg>
+<arg>${CORRECT_PASSWORD}</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.716" endtime="20231211 20:44:01.716"/>
+</kw>
+<kw name="Take Screenshot">
+<status status="NOT RUN" starttime="20231211 20:44:01.716" endtime="20231211 20:44:01.716"/>
+</kw>
+<kw name="Click">
+<arg>id=login-button</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.717" endtime="20231211 20:44:01.717"/>
+</kw>
+<status status="FAIL" starttime="20231211 20:44:01.714" endtime="20231211 20:44:01.717"/>
+</iter>
+<status status="FAIL" starttime="20231211 20:44:01.713" endtime="20231211 20:44:01.717"/>
+</for>
+<doc>Logs in the service with all the different
+usernames provided by the site</doc>
+<status status="FAIL" starttime="20231211 20:44:01.713" endtime="20231211 20:44:01.718">No keyword with name 'New Page' found.</status>
+</test>
+<test id="s1-t3" name="Login With Invalid Username" line="39">
+<kw name="New Page">
+<arg>https://www.saucedemo.com/</arg>
+<msg timestamp="20231211 20:44:01.722" level="FAIL">No keyword with name 'New Page' found.</msg>
+<status status="FAIL" starttime="20231211 20:44:01.722" endtime="20231211 20:44:01.722"/>
+</kw>
+<kw name="Fill Text">
+<arg>id=user-name</arg>
+<arg>${WRONG_USERNAME}</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.723" endtime="20231211 20:44:01.723"/>
+</kw>
+<kw name="Fill Text">
+<arg>id=password</arg>
+<arg>${CORRECT_PASSWORD}</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.723" endtime="20231211 20:44:01.723"/>
+</kw>
+<kw name="Click">
+<arg>id=login-button</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.724" endtime="20231211 20:44:01.724"/>
+</kw>
+<kw name="Get Element By Role">
+<var>${error}</var>
+<arg>heading</arg>
+<arg>name=${error_message_auth_error}</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.725" endtime="20231211 20:44:01.725"/>
+</kw>
+<kw name="Get Element States">
+<arg>${error}</arg>
+<arg>contains</arg>
+<arg>visible</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.726" endtime="20231211 20:44:01.726"/>
+</kw>
+<doc>Attempts to log in the service with invalid username</doc>
+<status status="FAIL" starttime="20231211 20:44:01.720" endtime="20231211 20:44:01.726">No keyword with name 'New Page' found.</status>
+</test>
+<test id="s1-t4" name="Login With Invalid Password" line="48">
+<kw name="New Page">
+<arg>https://www.saucedemo.com/</arg>
+<msg timestamp="20231211 20:44:01.729" level="FAIL">No keyword with name 'New Page' found.</msg>
+<status status="FAIL" starttime="20231211 20:44:01.729" endtime="20231211 20:44:01.729"/>
+</kw>
+<kw name="Fill Text">
+<arg>id=user-name</arg>
+<arg>${CORRECT_USERNAME}</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.729" endtime="20231211 20:44:01.729"/>
+</kw>
+<kw name="Fill Text">
+<arg>id=password</arg>
+<arg>${wrong_password}</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.730" endtime="20231211 20:44:01.730"/>
+</kw>
+<kw name="Click">
+<arg>id=login-button</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.731" endtime="20231211 20:44:01.731"/>
+</kw>
+<kw name="Get Element By Role">
+<var>${error}</var>
+<arg>heading</arg>
+<arg>name=${error_message_auth_error}</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.732" endtime="20231211 20:44:01.732"/>
+</kw>
+<kw name="Get Element States">
+<arg>${error}</arg>
+<arg>contains</arg>
+<arg>visible</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.733" endtime="20231211 20:44:01.733"/>
+</kw>
+<doc>Attempts to log in the service with invalid password</doc>
+<status status="FAIL" starttime="20231211 20:44:01.727" endtime="20231211 20:44:01.733">No keyword with name 'New Page' found.</status>
+</test>
+<test id="s1-t5" name="Login With No Credentials" line="57">
+<kw name="New Page">
+<arg>https://www.saucedemo.com/</arg>
+<msg timestamp="20231211 20:44:01.737" level="FAIL">No keyword with name 'New Page' found.</msg>
+<status status="FAIL" starttime="20231211 20:44:01.737" endtime="20231211 20:44:01.737"/>
+</kw>
+<kw name="Click">
+<arg>id=login-button</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.738" endtime="20231211 20:44:01.738"/>
+</kw>
+<kw name="Get Element By Role">
+<var>${error}</var>
+<arg>heading</arg>
+<arg>name=${ERROR_MESSAGE_USERNAME_REQ}</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.739" endtime="20231211 20:44:01.739"/>
+</kw>
+<kw name="Get Element States">
+<arg>${error}</arg>
+<arg>contains</arg>
+<arg>visible</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.739" endtime="20231211 20:44:01.739"/>
+</kw>
+<doc>Attempts to log in the service without inputs</doc>
+<status status="FAIL" starttime="20231211 20:44:01.736" endtime="20231211 20:44:01.740">No keyword with name 'New Page' found.</status>
+</test>
+<test id="s1-t6" name="Login With No Username" line="64">
+<kw name="New Page">
+<arg>https://www.saucedemo.com/</arg>
+<msg timestamp="20231211 20:44:01.745" level="FAIL">No keyword with name 'New Page' found.</msg>
+<status status="FAIL" starttime="20231211 20:44:01.745" endtime="20231211 20:44:01.745"/>
+</kw>
+<kw name="Fill Text">
+<arg>id=password</arg>
+<arg>${CORRECT_PASSWORD}</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.746" endtime="20231211 20:44:01.746"/>
+</kw>
+<kw name="Click">
+<arg>id=login-button</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.746" endtime="20231211 20:44:01.746"/>
+</kw>
+<kw name="Get Element By Role">
+<var>${error}</var>
+<arg>heading</arg>
+<arg>name=${ERROR_MESSAGE_USERNAME_REQ}</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.747" endtime="20231211 20:44:01.747"/>
+</kw>
+<kw name="Get Element States">
+<arg>${error}</arg>
+<arg>contains</arg>
+<arg>visible</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.748" endtime="20231211 20:44:01.748"/>
+</kw>
+<doc>Attempts to log in the service without username</doc>
+<status status="FAIL" starttime="20231211 20:44:01.744" endtime="20231211 20:44:01.748">No keyword with name 'New Page' found.</status>
+</test>
+<test id="s1-t7" name="Login With No Password" line="72">
+<kw name="New Page">
+<arg>https://www.saucedemo.com/</arg>
+<msg timestamp="20231211 20:44:01.753" level="FAIL">No keyword with name 'New Page' found.</msg>
+<status status="FAIL" starttime="20231211 20:44:01.753" endtime="20231211 20:44:01.754"/>
+</kw>
+<kw name="Fill Text">
+<arg>id=user-name</arg>
+<arg>${CORRECT_USERNAME}</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.754" endtime="20231211 20:44:01.754"/>
+</kw>
+<kw name="Click">
+<arg>id=login-button</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.755" endtime="20231211 20:44:01.755"/>
+</kw>
+<kw name="Get Element By Role">
+<var>${error}</var>
+<arg>heading</arg>
+<arg>name=${ERROR_MESSAGE_PASSWORD_REQ}</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.756" endtime="20231211 20:44:01.756"/>
+</kw>
+<kw name="Get Element States">
+<arg>${error}</arg>
+<arg>contains</arg>
+<arg>visible</arg>
+<status status="NOT RUN" starttime="20231211 20:44:01.757" endtime="20231211 20:44:01.757"/>
+</kw>
+<doc>Attempts to log in the service without password</doc>
+<status status="FAIL" starttime="20231211 20:44:01.750" endtime="20231211 20:44:01.757">No keyword with name 'New Page' found.</status>
+</test>
+<doc>Using Browser-library to perform simple GUI testing
+on the login part of the website</doc>
+<status status="FAIL" starttime="20231211 20:44:01.245" endtime="20231211 20:44:01.759"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="7" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="7" skip="0" id="s1" name="GUI Login test">GUI Login test</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231211 20:44:01.700" level="ERROR">Error in file 'D:\Code\Portfolio\GUI_Testing_project\tests\GUI_Login_test.robot' on line 4: Initializing library 'Browser' with no arguments failed: Could not find node dependencies in installation directory `C:\Users\Roni\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper.` Run `rfbrowser init` to install the dependencies.
+Traceback (most recent call last):
+  File "C:\Users\Roni\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\browser.py", line 820, in __init__
+    self.playwright = Playwright(
+                      ^^^^^^^^^^^
+  File "C:\Users\Roni\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\playwright.py", line 53, in __init__
+    self.ensure_node_dependencies()
+  File "C:\Users\Roni\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\playwright.py", line 85, in ensure_node_dependencies
+    raise RuntimeError(
+RuntimeError: Could not find node dependencies in installation directory `C:\Users\Roni\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\wrapper.` Run `rfbrowser init` to install the dependencies.</msg>
+</errors>
+</robot>
